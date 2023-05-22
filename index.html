@@ -26,6 +26,28 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  
+  <script>
+  $(document).ready(function(){
+      $("#show").click(function(){
+          $("#text").toggle("blind");
+      });
+      $("#hide").click(function(){
+          $("#text").hide();
+      });
+  });
+  </script>
+
+  <script>
+    $(document).ready(function() {
+      var id = prompt("請輸入會員帳號");
+      if (id=='abc')
+        $('#about').show();
+      else
+        $('#about').hide();
+    });
+  </script>
 
   <!-- =======================================================
   * Template Name: Personal
@@ -45,7 +67,7 @@
 
       <h1><a href="index.html">Golden State Warriors</a></h1>
       <!--<a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-      <h2>A team with GOATs</h2>
+      <h2>my favorite NBA team</h2>
 
       <nav id="navbar" class="navbar">
         <ul>
@@ -705,13 +727,13 @@
             <div class="info-box col-md-6 my-4 py-6">
               <i class="bx bx-map"></i>
               <h3>Chase Center</h3>
-              <p><a href="https://goo.gl/maps/WN5R1MKi664sTiv26">1 Warriors Way, San Francisco, CA 94158, United States</a></p>
+              <p><a href="https://goo.gl/maps/WN5R1MKi664sTiv26" target="_blank">1 Warriors Way, San Francisco, CA 94158, United States</a></p>
             </div>
         
-            <div class="info-box col-md-6 my-4 py-6">
+            <div class="info-box col-md-6 my-4 py-6" id="show">
               <i class="bx bx-link"></i>
-              <h3>About Chase Center</h3>
-              <p><a href="https://www.chasecenter.com/home">chasecenter.com</a></p>
+              <h3 id="text">About Chase Center</h3>
+              <p><a href="https://www.chasecenter.com/home" target="_blank">chasecenter.com</a></p>
             </div>
           
             <div class="info-box col-md-6 my-4 py-6">
